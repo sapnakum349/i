@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Printer Hub</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#172b46}
+header{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:#fff}
+.logo{font-size:27px;font-weight:bold;color:#0878f9}
+nav a{margin-left:20px;text-decoration:none;color:#172b46}
+.hero{background:#edf7ff;padding:65px 7%;display:flex;align-items:center;gap:40px}
+.hero div{flex:1}
+.hero img{width:45%;border-radius:16px}
+h1{font-size:55px;margin-bottom:15px}
+h1 span{color:#0878f9}
+p{line-height:1.7;color:#5b6b7e;margin:12px 0}
+.btn{display:inline-block;background:#0878f9;color:white;padding:12px 23px;border-radius:25px;text-decoration:none;margin-top:10px}
+section.products{padding:50px 7%}
+h2{font-size:32px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:25px}
+.card{background:#f0f7ff;border-radius:12px;overflow:hidden}
+.card img{width:100%;height:160px;object-fit:cover}
+.card div{padding:16px}
+.card a{color:#0878f9;text-decoration:none;font-weight:bold}
+.about{padding:45px 7%;background:#edf7ff}
+.contact{padding:35px 7%;background:#0878f9;color:white}
+.contact p{color:white}
+footer{background:#102746;color:white;text-align:center;padding:25px}
+footer p{color:#d4e2f3}
+@media(max-width:700px){
+ header{flex-wrap:wrap;gap:15px}
+ nav a{margin-left:8px;font-size:13px}
+ .hero{flex-direction:column;align-items:flex-start;padding:40px 7%}
+ .hero img{width:100%}
+ h1{font-size:43px}
+ .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:430px){
+ nav{display:flex;flex-wrap:wrap;gap:10px}
+ nav a{margin:0}
+ .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Printer Hub</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#printers">Printers</a>
+<a href="#ink">Ink & Toner</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<p>WELCOME TO PRINTER HUB</p>
+<h1>Print <span>Smarter.</span><br>Work Better.</h1>
+<p>Discover quality printers, ink cartridges, toner and printing accessories for your home and office.</p>
+<a class="btn" href="#printers">Explore Products →</a>
+</div>
+<img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=900&q=80" alt="Printer">
+</section>
+
+<section class="products" id="printers">
+<h2>Our Products</h2>
+<p>Find the right printing solution for your needs.</p>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=500&q=80" alt="Inkjet printer">
+<div><h3>Inkjet Printers</h3><p>Great for home and color printing.</p><a href="#contact">Enquire Now →</a></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80" alt="Laser printer">
+<div><h3>Laser Printers</h3><p>Fast printing for offices.</p><a href="#contact">Enquire Now →</a></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=500&q=80" alt="Multifunction printer">
+<div><h3>All-in-One</h3><p>Print, scan and copy.</p><a href="#contact">Enquire Now →</a></div>
+</div>
+<div class="card" id="ink">
+<img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=500&q=80" alt="Printing supplies">
+<div><h3>Ink & Toner</h3><p>Printing supplies and cartridges.</p><a href="#contact">Enquire Now →</a></div>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>Why Choose Printer Hub?</h2>
+<p>✓ Quality printing products</p>
+<p>✓ Friendly customer support</p>
+<p>✓ Solutions for home and office</p>
+<p>✓ Printers, ink, toner and accessories in one place</p>
+</section>
+
+<section class="contact" id="contact">
+<h2>Need Help Choosing a Printer?</h2>
+<p>Contact us for product details and enquiries.</p>
+<a class="btn" style="background:white;color:#0878f9" href="mailto:your@email.com">Email Us</a>
+</section>
+
+<footer>
+<h3>Printer Hub</h3>
+<p>Print Smarter. Work Better.</p>
+<p>Email: your@email.com | Phone: Your phone number</p>
+<p>© <span id="year"></span> Printer Hub. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
